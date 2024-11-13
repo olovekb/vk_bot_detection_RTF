@@ -1,0 +1,5 @@
+.venv
+venv
+__pyache__
+.DS_Store
+*.ipynb
