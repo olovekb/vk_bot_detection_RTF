@@ -14,7 +14,7 @@ from time import time, sleep
 
 BASIC_LINK = 'https://api.vk.com/method/'
 #токен курва
-ACCESS_TOKEN = 'vk1.a.FtkUbeBm_3N01DvRwFyeOnTa5D3AX6QesBQKaSJMFRY6dre88iI1Xn_hPF0qEjPsGWS_Mr6lx262ddjL0huaep9QXZnBG9CZ7KdYfJDdhJrFPLHl3Go6eL7kD0wzgb0uv93QTIhBT80DyhQfppvG4XhsSd2oD64SFdTtlKodnDlA896ZXKVx7IYFU02wmvTSiW4Fhy8uE0JxCA-iP3HmRA'
+ACCESS_TOKEN = ''
 
 def get_friends_ids(user_id, uid2friends):
     """Addition of friends ids to dictionary uid2friends"""
