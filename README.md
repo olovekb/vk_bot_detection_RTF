@@ -44,7 +44,7 @@ Web приложение на FastApi предназначенное для пр
     Для Linux/MacOS:
 
     ```bash
-    .venv\Script\activate
+    source .venv\bin\activate
     ```
 
 3. Установка необходимых библиотек (команды необходимо выполнять в виртуальном окружении)
