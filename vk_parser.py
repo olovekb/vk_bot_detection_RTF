@@ -183,12 +183,15 @@ def get_user_subscriptions(user_id, access_token, result='amount', **subscriptio
         return data['response']
 
 def parse_data(user_name,user_params,save = True):
-    token = os.getenv('VK_OAUTH_TOKEN')
+    #token = os.getenv('VK_OAUTH_TOKEN')
+    token = "vk1.a.FtkUbeBm_3N01DvRwFyeOnTa5D3AX6QesBQKaSJMFRY6dre88iI1Xn_hPF0qEjPsGWS_Mr6lx262ddjL0huaep9QXZnBG9CZ7KdYfJDdhJrFPLHl3Go6eL7kD0wzgb0uv93QTIhBT80DyhQfppvG4XhsSd2oD64SFdTtlKodnDlA896ZXKVx7IYFU02wmvTSiW4Fhy8uE0JxCA-iP3HmRA"
     access_token = token  
     user_info = get_user_info(user_name, access_token,user_params)
     print("user_info1",user_info)
     user_info['friends'] = get_user_friends(user_info['id'],access_token)
     print("user_info2",user_info)
+    if 'error' in user_info:
+        raise RuntimeError(f"VK API Error: {user_info['error']['error_msg']}")
     if 'error' in user_info.keys():
         print('Error')
         print('Data:',user_info)
