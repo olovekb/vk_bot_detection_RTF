@@ -1,0 +1,12 @@
+[
+    {
+        "uid": "https://vk.com/id123456",
+        "expected_prediction": 1,
+        "expected_probability": 0.85
+    },
+    {
+        "uid": "https://vk.com/id789012",
+        "expected_prediction": 0,
+        "expected_probability": 0.10
+    }
+]

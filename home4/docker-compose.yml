@@ -1,0 +1,9 @@
+services:
+  fastapi:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/vk_bot_detection_RTF
+    env_file:
+      - .env
