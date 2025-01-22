@@ -53,9 +53,9 @@ Web приложение на FastApi предназначенное для пр
     pip install -r /path/to/requirements.txt
     ```
 
-4. Необходимо создать файл .env и сохранить в него токен для обращения к API VK:
+4. Необходимо прописать токен к API VK в app.py:
 
-    ```env
+    ```
     VK_OAUTH_TOKEN = ''
     ```
 
