@@ -1,13 +1,18 @@
-FROM python:3.9
+# Используем официальный образ Python
+FROM python:3.7
 
-WORKDIR /vk_bot_detection_RTF
+# Устанавливаем рабочую директорию
+WORKDIR /app
 
-COPY requirements.txt .
+# Копируем файлы проекта в контейнер
+COPY . /app
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Устанавливаем зависимости
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-COPY . .
-
+# Открываем порт для приложения
 EXPOSE 8000
 
-CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# Запускаем приложение
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

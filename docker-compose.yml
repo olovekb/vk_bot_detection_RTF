@@ -1,9 +1,12 @@
+version: "3.7"
 services:
-  fastapi:
+  app:
     build: .
+    container_name: fastapi-vk
     ports:
       - "8000:8000"
+    environment:
+      - ACCESS_TOKEN=your_vk_api_access_token
     volumes:
-      - .:/vk_bot_detection_RTF
-    env_file:
-      - .env
+      - .:/app
+    restart: always
